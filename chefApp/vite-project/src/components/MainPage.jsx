@@ -1,5 +1,6 @@
 // src/components/MainPage.jsx
 import React, { useRef, useState, useEffect } from "react";
+import './MainPage.css';
 
 export default function MainPage() {
   const videoRef = useRef(null);
@@ -151,9 +152,9 @@ export default function MainPage() {
   };
 
   return (
-    <div>
-      <h1>Main Dashboard</h1>
-      <button onClick={handleToggle}>
+    <div className="main-main-container">
+      <h1>Click here to Enable the Camera</h1>
+      <button id='button-main' onClick={handleToggle}>
         {cameraOn ? "Disable Camera" : "Enable Camera"}
       </button>
 

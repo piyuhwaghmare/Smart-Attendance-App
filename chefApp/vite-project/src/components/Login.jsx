@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState} from 'react';
+import './Login.css'
 import {useNavigate} from 'react-router-dom';
 
 const Login = () => {
@@ -15,7 +16,7 @@ const Login = () => {
 
     const formData = new FormData(e.currentTarget);
     const data = {
-      email: formData.get('email'),
+      email: formData.get('emaill'),
       password: formData.get('password')
     }
 
@@ -37,16 +38,22 @@ const Login = () => {
   }
 
   return (
-    <div>
-      <h1>Login here</h1>
-      <form onSubmit = {handleSubmit}>
-        <label id='email'>Email</label>
-        <input type='text' id='email' name='email' />
+    <div className='login-container'>
+      <h1 id='h1'>Login here</h1>
+      <form className='FORM' onSubmit = {handleSubmit}>
+        <div>
+          <label id='emaill'>Email</label>
+          <input type='text' id='emaill' name='emaill' required />
+        </div>
         <br />
-        <label id='password'>Password</label>
-        <input type='password' id='password' name='password' />
+        <div>
+          <label id='password'>Password</label>
+          <input type='password' id='password' name='password' required />
+        </div>
         <br />
-        <button type='submit'>Login</button> 
+        <div>
+          <button type='submit'>Login</button> 
+        </div>
       </form>
     </div>
   )

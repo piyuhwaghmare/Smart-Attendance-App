@@ -1,7 +1,8 @@
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100vw;
     gap: 10px;
     background-color: white;
     height: 80px;
@@ -12,4 +13,35 @@
    font-size: 24px;
    font-weight: 400;
    margin: 0;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+#main-page {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 2px 2px 2px black, -2px -2px 2px black;
+}
+
+#login-page {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 2px 2px 2px black, -2px -2px 2px black;
+}
+
+#top1 {
+    margin-left: 5px;
+}
+
+.logout {
+    margin-right: 5px;
 }
